@@ -10,3 +10,12 @@ Class Vehicle:
         print(f"Model: {self.model}")
         print(f"Year: {self.year}")
         print(f"Rental Price Per Day: {self.__rental_price_per_day}")
+
+    def calculate_rental_cost(self, days):
+        return self.__rental_price_per_day * days
+
+    def set_rental_price_per_day(self, price):
+        self.__rental_price_per_day = price
+
+    def get_rental_price_per_day(self):
+        return self.__rental_price_per_day
