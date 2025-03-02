@@ -1,4 +1,4 @@
-Class Vehicle:
+class Vehicle:
     def __init__(self, brand, model, year, rental_price_per_day):
         self.brand = brand
         self.model = model
@@ -10,7 +10,7 @@ Class Vehicle:
         print(f"Brand: {self.brand}")
         print(f"Model: {self.model}")
         print(f"Year: {self.year}")
-        print(f"Rental Price Per Day: {self.__rental_price_per_day}")
+        print(f"Rental Price Per Day: {self.__rental_price_per_day}$/day")
 
     def calculate_rental_cost(self, days):
         return self.__rental_price_per_day * days
@@ -23,7 +23,7 @@ Class Vehicle:
     def get_rental_price_per_day(self):
         return self.__rental_price_per_day
 
-Class Car(Vehicle):
+class Car(Vehicle):
     def __init__(self, brand, model, year, rental_price_per_day, seat_capacity): #Added additional attribute: seating_capacity for Car class
         self.seat_capacity = seat_capacity
         super().__init__(brand, model, year, rental_price_per_day)
@@ -33,7 +33,7 @@ Class Car(Vehicle):
         super().display_info()
         print(f"Seating Capacity: {self.seat_capacity}")
 
-Class Bike(Vehicle):
+class Bike(Vehicle):
     def __init__(self, brand, model, year, rental_price_per_day, engine_capacity): #Added additional attribute: engine_capacity for Bike class
         self.engine_capacity = engine_capacity
         super().__init__(brand, model, year, rental_price_per_day)
@@ -41,4 +41,9 @@ Class Bike(Vehicle):
         #Overriding the display_info method to display the information of the bike
     def display_info(self):
         super().display_info()
-        print(f"Engine Capacity: {self.engine_capacity}")
+        print(f"Engine Capacity: {self.engine_capacity}cc")
+
+
+#Demonstrating polymorphism.
+def show_vehicle_info(vehicle):
+    vehicle.display_info()
