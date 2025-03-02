@@ -47,3 +47,7 @@ class Bike(Vehicle):
 #Demonstrating polymorphism.
 def show_vehicle_info(vehicle):
     vehicle.display_info()
+
+#Creating instances of Car and Bike classes
+car1 = Car("Toyota", "Corolla", 2020, 50, 5)
+bike1 = Bike("Yamaha", "R1", 2019, 30, 998)
