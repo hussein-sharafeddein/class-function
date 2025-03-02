@@ -28,7 +28,17 @@ Class Car(Vehicle):
         self.seat_capacity = seat_capacity
         super().__init__(brand, model, year, rental_price_per_day)
 
+        #Overriding the display_info method to display the information of the car
+    def display_info(self):
+        super().display_info()
+        print(f"Seating Capacity: {self.seat_capacity}")
+
 Class Bike(Vehicle):
     def __init__(self, brand, model, year, rental_price_per_day, engine_capacity): #Added additional attribute: engine_capacity for Bike class
         self.engine_capacity = engine_capacity
         super().__init__(brand, model, year, rental_price_per_day)
+
+        #Overriding the display_info method to display the information of the bike
+    def display_info(self):
+        super().display_info()
+        print(f"Engine Capacity: {self.engine_capacity}")
