@@ -10,7 +10,7 @@ class Vehicle:
         print(f"Brand: {self.brand}")
         print(f"Model: {self.model}")
         print(f"Year: {self.year}")
-        print(f"Rental Price Per Day: {self.__rental_price_per_day}$/day")
+        print(f"Rental Price Per Day: ${self.__rental_price_per_day}/day")
 
     def calculate_rental_cost(self, days):
         return self.__rental_price_per_day * days
@@ -57,6 +57,8 @@ car3 = Car("Porsche", "911", 2022, 100, 2)
 bike3 = Bike("Kawasaki", "Ninja H2R", 2020, 150, 998)
 
 #Calling the show_vehicle_info function to display the information of the vehicles
+print("Vehicle Information: ")
+print("=====================")
 show_vehicle_info(car1)
 print("=====================")
 show_vehicle_info(car2)
@@ -71,6 +73,8 @@ show_vehicle_info(bike3)
 print("=====================")
 
 #Calling the calculate_rental_cost method to calculate the rental cost of the vehicles
+print("Rental Costs: ")
+print("=====================")
 print(f"Rental Cost for Toyota Corolla for 3 days: {car1.calculate_rental_cost(3)}$")
 print("=====================")
 print(f"Rental Cost for Honda Civic for 5 days: {car2.calculate_rental_cost(5)}$")
@@ -82,4 +86,28 @@ print("=====================")
 print(f"Rental Cost for Suzuki GSX-R1000 for 7 days: {bike2.calculate_rental_cost(7)}$")
 print("=====================")
 print(f"Rental Cost for Kawasaki Ninja H2R for 4 days: {bike3.calculate_rental_cost(4)}$")
+print("=====================")
+
+#Updating the rental price per day of the vehicles using the setter method
+car1.set_rental_price_per_day(55)
+bike1.set_rental_price_per_day(33)
+car2.set_rental_price_per_day(54)
+bike2.set_rental_price_per_day(111)
+car3.set_rental_price_per_day(125)
+bike3.set_rental_price_per_day(133)
+
+#Displaying the updated rental price per day of the vehicles using the getter method
+print("Updated Rental Prices Per Day:")
+print("=====================")
+print(f"Updated Rental Price Per Day for Toyota Corolla: ${car1.get_rental_price_per_day()}/day")
+print("=====================")
+print(f"Updated Rental Price Per Day for Honda Civic: ${car2.get_rental_price_per_day()}/day")
+print("=====================")
+print(f"Updated Rental Price Per Day for Porsche 911: ${car3.get_rental_price_per_day()}/day")
+print("=====================")
+print(f"Updated Rental Price Per Day for Yamaha R1: ${bike1.get_rental_price_per_day()}/day")
+print("=====================")
+print(f"Updated Rental Price Per Day for Suzuki GSX-R1000: ${bike2.get_rental_price_per_day()}/day")
+print("=====================")
+print(f"Updated Rental Price Per Day for Kawasaki Ninja H2R: ${bike3.get_rental_price_per_day()}/day")
 print("=====================")
