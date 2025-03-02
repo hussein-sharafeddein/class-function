@@ -51,3 +51,9 @@ def show_vehicle_info(vehicle):
 #Creating instances of Car and Bike classes
 car1 = Car("Toyota", "Corolla", 2020, 50, 5)
 bike1 = Bike("Yamaha", "R1", 2019, 30, 998)
+
+#Calling the show_vehicle_info function to display the information of the car and bike
+show_vehicle_info(car1)
+print("=====================")
+show_vehicle_info(bike1)
+print("=====================")
